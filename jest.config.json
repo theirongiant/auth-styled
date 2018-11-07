@@ -1,0 +1,10 @@
+{
+    "collectCoverage": true,
+    "verbose": true,
+    "moduleFileExtensions": [
+        "js"
+    ],
+    "roots": [
+        "<rootDir>/src"
+    ]
+}

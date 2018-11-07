@@ -1,0 +1,51 @@
+{
+  "name": "auth-scaffold",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --color --config webpack.dev.js",
+    "test": "jest",
+    "lint": "eslint *.js **/*.js",
+    "savelint": "eslint *.js **/*.js > lint.txt",
+    "build": "npm version patch && webpack -p --env prod --config webpack.prod.js",
+    "build:minor": "npm version minor && webpack -p --config webpack.prod.js",
+    "build:major": "npm version major && webpack -p --config webpack.prod.js"
+  },
+  "author": "Mark Duncan",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "compression-webpack-plugin": "^2.0.0",
+    "css-loader": "^1.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
+    "react-hot-loader": "^4.3.12",
+    "react-testing-library": "^5.2.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "firebase": "^5.5.7",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-router-dom": "^4.3.1"
+  },
+  "babel": {
+    "presets": "./.babelrc.js"
+  }
+}
